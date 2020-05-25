@@ -3,4 +3,6 @@
 Añadidos elementos básicos para iniciar
 
 #Por hacer
-Paginas para cada poder y mostrarlas en pantalla
+#Corregir espaciado tablas de paginas
+#boton para añadir poderes a la base de datos
+
