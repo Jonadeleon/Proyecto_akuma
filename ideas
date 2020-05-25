@@ -1,0 +1,10 @@
+idea para contador de coste de siguiente poder
+
+var num1 = 50
+var num2 = 25
+
+if checkbox == true
+  num1 + 25 = result
+  print result
+  
+  result = num1
