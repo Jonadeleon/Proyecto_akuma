@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content%}
+
+    <div class="jumbotron">
+        <h2>Lista de poderes basicos del arquetipo Akuma</h2>
+        <h5>Cada personaje podrá adquirir uno de estos Poderes Básicos por cada 30 puntos que posea en la Habilidad de Desarrollo Sobrenatural, sin necesidad de invertir Puntos de Experiencia o POT absorbida.</h5>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Requisito</th>
+                <th>Descripción</th>
+            </tr>
+            </thead>
+            <tbody class="searchable">
+                    {% for basicos in basicos %}
+                    <tr>
+                        <td>{{basicos["name"]}}</td>
+                        <td>{{basicos["requisito"]}}</td>
+                        <td>{{basicos["description"]}}</td>
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock %}

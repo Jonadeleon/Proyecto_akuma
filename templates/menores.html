@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content%}
+
+    <div class="jumbotron">
+        <h2>Lista de poderes menores del arquetipo Oni</h2>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Clase</th>
+                <th>Requisito</th>
+                <th>Coste</th>
+                <th>Efecto</th>
+                <th>Efecto Menor</th>
+                <th>Limite</th>
+                <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody class="searchable">
+                    {% for menores in menores %}
+                    <tr>
+                        <td>{{menores["name"]}}</td>
+                        <td>{{menores["clase"]}}</td>
+                        <td>{{menores["requisito"]}}</td>
+                        <td>{{menores["coste"]}}</td>
+                        <td>{{menores["efecto"]}}</td>
+                        <td>{{menores["efecto_menor"]}}</td>
+                        <td>{{menores["limite"]}}</td>
+                        <td>{{menores["accion"]}}</td>
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock %}

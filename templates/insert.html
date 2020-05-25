@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content%}
+
+    <div class="jumbotron">
+        <h2>Introduce poder</h2>
+
+    </div>
+
+    <form action="/enviar_activo" method="GET" >
+        <h1> Introduce datos del poder </h1>
+
+        <!-- Cuadro para añadir datos -->
+        <div class="form-group col-md-3">
+              <label for="marca">Introduce marca: </label>
+              <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca">
+        </div>
+        <!-- Cuadro para añadir la Marca del activo -->
+        <div class="form-group col-md-3">
+              <label for="marca">Introduce marca: </label>
+              <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca">
+        </div>
+        <!-- Cuadro para añadir el Modelo del activo -->
+        <div class="form-group col-md-3">
+            <label for="modelo">Introduce modelo: </label>
+            <!-- hay que poner el valor de name para que los request lleguen con datos -->
+            <input type="text" name="modelo" class="form-control" id="modelo" placeholder="Modelo">
+        </div>
+        <!-- Cuadro para añadir Cantidad de activos -->
+       <div class="form-group col-md-2">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="0">
+       </div>
+
+        <!-- Cuadro para introducir la URL -->
+       <div class="form-group col-md-6">
+                <label for="url">Introduce URL</label>
+                <input type="text" class="form-control" id="url" name="url">
+       </div>
+        <!-- Cuadro de texto para introducir Observaciones -->
+       <div class="form-group col-md-6">
+          <label for="observaciones">Introduce observaciones</label>
+          <input type="text" class="form-control" id="observaciones" maxlength="100" name="observaciones">
+       </div>
+       <!-- Boton para enviar el form -->
+       <div class="form-group col-md-1">
+           <button type="submit" class="btn btn-primary">Enviar</button>
+       </div>
+    </form>
+
+{% endblock %}

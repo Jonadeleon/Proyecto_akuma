@@ -5,7 +5,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 # ponemos la conexion y la base de datos MUY IMPORTANTE TENER VERSION DE PYTHON ACTUALIZADO Y CONFIGURADO EN PYCHARM O NO FUNCIONARÁ EL ENLACE
 client = MongoClient("mongodb+srv://karmaster:acm1ptcactm@cluster0-gsee8.mongodb.net/test?retryWrites=true&w=majority")
-db = client.Rol_test
+db = client.akuma
 
 @app.route('/')
 def inicio():
@@ -13,30 +13,31 @@ def inicio():
 
 # Ruta para listar todas las clases, sólo acepta métodos GET y POST
 # Usando GET obtenemos la lista de todas las clases, usando POST creamos una nueva
-@app.route('/clases', methods=['GET', 'POST'])
-def clases():
-    clases = db.clases.find().sort("name", 1)
-    return render_template('clases.html', clases=clases)
+@app.route('/innatos', methods=['GET'])
+def innatos():
+    innatos = db.poderes_innatos.find().sort("name", 1)
+    return render_template('innatos.html', innatos=innatos)
 
-@app.route('/razas')
-def razas():
-    razas = db.razas.find()
-    return render_template('razas.html', razas=razas)
+@app.route('/basicos', methods=['GET'])
+def basicos():
+    basicos = db.poderes_básicos.find().sort("name", 1)
+    return render_template('basicos.html', basicos=basicos)
 
-@app.route('/armaduras')
-def armaduras():
-    armors = db.armaduras.find()
-    return render_template('armaduras.html', armors=armors)
+@app.route('/menores', methods=['GET'])
+def menores():
+    menores = db.poderes_menores.find().sort("name", 1)
+    return render_template('menores.html', menores=menores)
 
-@app.route('/armas')
-def armas():
-    weapons = db.armas.find()
-    return render_template('armas.html', weapons=weapons)
 
-@app.route('/items')
-def items():
-    items = db.items.find()
-    return render_template('items.html', items=items)
+@app.route('/mayores', methods=['GET'])
+def mayores():
+    mayores = db.poderes_mayores.find().sort("name", 1)
+    return render_template('mayores.html', mayores=mayores)
+
+@app.route('/superiores', methods=['GET'])
+def superiores():
+    superiores = db.poderes_superiores.find().sort("name", 1)
+    return render_template('superiores.html', superiores=superiores)
 
 @app.route('/subida')
 def subida():

@@ -26,77 +26,20 @@
         <ul class="navbar-nav mr-auto">
 
             <li class="nav-item">
-                <a class="nav-link" href="/clases">Clases</a>
+                <a class="nav-link" href="/innatos">Poderes Innatos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/razas">Razas</a>
+                <a class="nav-link" href="/basicos">Poderes Basicos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/armaduras">Armaduras</a>
+                <a class="nav-link" href="/menores">Poderes Menores</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/armas">Armas</a>
+                <a class="nav-link" href="/mayores">Poderes Mayores</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/items">Items</a>
+                <a class="nav-link" href="/superiores">Poderes Superiores</a>
             </li>
-            <div class="container">
-                <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#update-db">Añadir a base de datos</button>
-                    <form action="/subida" method="GET">
-                        <div class="modal fade" id="update-db" tabindex="-1" role="dialog" aria-labelledby="update-db" aria-hidden="true" data-backdrop="false">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="update-db-moal">Añadir a db</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                         <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="form-group col-md-5">
-                                            Nombre de la clase
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nombre">
-                                        </div>
-                                        <div class="form-group col-md-5">
-                                            Descripcion
-                                            <input type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion">
-                                        </div>
-                                        <!-- Cuadro para añadir el stat -->
-                                        <div class="form-group col-md-3">
-                                            Stat
-                                              <input type="text" class="form-control" name="stat_bonus" id="stat_bonus" placeholder="Stat">
-                                        </div>
-                                        <div class="form-group col-md-5">
-                                            Dados Vida
-                                            <input type="text" class="form-control" name="dados_pv" id="dados_pv" placeholder="Dados PV">
-                                        </div>
-                                        <div class="form-group col-md-5">
-                                            Dados Magia
-                                            <input type="text" class="form-control" name="dados_pm" id="dados_pm" placeholder="Dados PM">
-                                        </div>
-                                        <div class="form-group col-md-5">
-                                            Licencias
-                                            <input type="text" class="form-control" name="licencias" id="licencias" placeholder="Licencias">
-                                        </div>
-                                        <!-- Cuadro para añadir la habilidad -->
-                                        <div class="form-group col-md-3">
-                                            Habilidades
-                                            <input type="text" class="form-control" name="hab1" id="hab1" placeholder="Hab1">
-                                        </div>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                       <button type="submit" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </li>
-            </div>
-
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Buscar">

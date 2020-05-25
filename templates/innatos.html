@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content%}
+
+    <div class="jumbotron">
+        <h2>Lista de poderes innatos del arquetipo Oni</h2>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+            </tr>
+            </thead>
+            <tbody class="searchable">
+                    {% for innatos in innatos %}
+                    <tr>
+                        <td>{{innatos["name"]}}</td>
+                        <td>{{innatos["description"]}}</td>
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content%}
+
+    <div class="jumbotron">
+        <h2>Lista de poderes superiores del arquetipo Oni</h2>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Requisito</th>
+                <th>Clase</th>
+                <th>Efecto</th>
+                <th>Limite</th>
+                <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody class="searchable">
+                    {% for superiores in superiores %}
+                    <tr>
+                        <td>{{superiores["name"]}}</td>
+                        <td>{{superiores["requisito"]}}</td>
+                        <td>{{superiores["clase"]}}</td>
+                        <td>{{superiores["efecto"]}}</td>
+                        <td>{{superiores["limite"]}}</td>
+                        <td>{{superiores["accion"]}}</td>
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock %}

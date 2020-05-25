@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content%}
+
+    <div class="jumbotron">
+        <h2>Lista de poderes mayores del arquetipo Oni</h2>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Clase</th>
+                <th>Requisito</th>
+                <th>Coste</th>
+                <th>Efecto</th>
+                <th>Limite</th>
+                <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody class="searchable">
+                    {% for mayores in mayores %}
+                    <tr>
+                        <td>{{mayores["name"]}}</td>
+                        <td>{{mayores["clase"]}}</td>
+                        <td>{{mayores["requisito"]}}</td>
+                        <td>{{mayores["coste"]}}</td>
+                        <td>{{mayores["efecto"]}}</td>
+                        <td>{{mayores["limite"]}}</td>
+                        <td>{{mayores["accion"]}}</td>
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+{% endblock %}
