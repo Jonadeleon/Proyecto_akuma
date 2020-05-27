@@ -8,14 +8,19 @@
         <table class="table table-striped">
             <thead>
             <tr>
+                <th></th>
                 <th>Nombre</th>
                 <th>Requisito</th>
                 <th>Descripción</th>
             </tr>
             </thead>
+
             <tbody class="searchable">
                     {% for basicos in basicos %}
                     <tr>
+                        <td>
+                            <input type="checkbox" id="materialUnchecked" >
+                        </td>
                         <td>{{basicos["name"]}}</td>
                         <td>{{basicos["requisito"]}}</td>
                         <td>{{basicos["description"]}}</td>

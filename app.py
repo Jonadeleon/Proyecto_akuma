@@ -5,7 +5,8 @@ from pymongo import MongoClient
 app = Flask(__name__)
 # ponemos la conexion y la base de datos MUY IMPORTANTE TENER VERSION DE PYTHON ACTUALIZADO Y CONFIGURADO EN PYCHARM O NO FUNCIONARÁ EL ENLACE
 client = MongoClient("mongodb+srv://karmaster:acm1ptcactm@cluster0-gsee8.mongodb.net/test?retryWrites=true&w=majority")
-db = client.akuma
+db = client["akuma"]
+col = db["poderes_menores"]
 
 @app.route('/')
 def inicio():
@@ -39,28 +40,6 @@ def superiores():
     superiores = db.poderes_superiores.find().sort("name", 1)
     return render_template('superiores.html', superiores=superiores)
 
-@app.route('/subida')
-def subida():
-    name = request.args['name']
-    description = request.args['descripcion']
-    stat_bonus = request.args['stat_bonus']
-    dice_pv = request.args['dados_pv']
-    dice_pm = request.args['dados_pm']
-    licencias = request.args['licencias']
-    hab1 = request.args['hab1']
-
-    db.clases.insert_one(
-        {
-            "name": name,
-            "descripcion": description,
-            "stat_bonus": stat_bonus,
-            "dice_pv": dice_pv,
-            "dice_pm": dice_pm,
-            "licencias": licencias,
-            "hab1": hab1
-        }
-    )
-    return redirect('/clases')
 
 
 if __name__ == "__main__":
